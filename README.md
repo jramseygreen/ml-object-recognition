@@ -1,9 +1,6 @@
 
-![ rtrtr](images/image1.png "dd")
-
-![](images/image2.png "")
-
-
+![Separator](images/image1.png "Separator")
+![](images/image2.png)
 
 # What is the best approach for image classification with a small dataset?
 ### 10/12/2020
@@ -11,14 +8,14 @@
 
 ## **CSC-345 Big Data And Machine Learning Coursework**
 
-
+![Separator](images/image1.png "Separator")
 # Introduction
 
 Using the CIFAR-10 dataset, it is possible to extract the features contained within the RGB elements to train a Neural Network for categorisation. For this task, a small section of the dataset will be used, and therefore choosing the best machine learning algorithm possible becomes more important; being that a larger dataset would bring with it a slightly different approach and higher accuracy as was discussed in the international journal for science and research [(‘Scaling up Machine Learning Algorithms for Large Datasets’, 2016)](https://paperpile.com/c/tlKYPw/ZchP).
 
 To classify the images, I selected three methods: a fully connected neural network, a support vector machine model, and a convoluted neural network with layers responsible for feature extraction. I also compared dimensionality reduction with Principle Component Analysis (PCA) and feature extraction using the Histogram Of Gradient (HOG) algorithm. Of these, I expect CNN to perform the best, but the question still remains whether this will hold true with a small dataset size. Some of the issues surrounding such a question are explored in a paper presented at the ICSAI [(Dalal and Triggs, no date; Luo et al., 2018)](https://paperpile.com/c/tlKYPw/ndKo+6aU5).
 
-
+![Separator](images/image1.png "Separator")
 # Method
 
 Before starting, I transformed the image data so that calling images[i] would return the ith image.
@@ -54,7 +51,7 @@ Having multiple dense layers appeared to hurt the accuracy of the model, so I de
 
 Using a higher batch size  also seemed to yield slightly better results, however this could be within the margin of error. I used a batch size of 500.
 
-
+![Separator](images/image1.png "Separator")
 # Qualitative Results
 ![PCA & HOG](images/image3.png "Results of PCA or HOG used with a neural network")
 ![SVM](images/image4.png "Results of SVM used")
@@ -81,14 +78,14 @@ Using SVM yielded a result of 50% accuracy, which seems fairly decent, however r
 
 The CNN yields an excellent result of around 58 - 60% accuracy and does seem to be an excellent result for the small nature of the dataset. I attempted to tweak this model a lot, adding and removing layers in the convoluted stage and increasing the output of the conv2D layers to attempt to improve the feature extraction. I also tried creating a larger and more complicated fully connected network for the flatted data however a simpler network produced superior results and I used a dense layer with 128 neurons rather than two or more layers, for example a layer of 128 feeding into a layer of 64.
 
-
+![Separator](images/image1.png "Separator")
 # Conclusion
 
 Overall, all of the models suffer somewhat from overfitting of the data since the train loss decreases while the validation loss increases, and the accuracy climbs much higher than the val accuracy. Despite this, the models do a decent job at predicting the categorisation of images.
 
 A CNN does the best job at classifying the images in a small dataset, with a result hovering around 60% accuracy and running in a reasonable length of time. If we wanted to construct a prediction model as quickly as possible, a fully connected neural network with PCA would be best however, since we can train our model within seconds and with very few epochs to reach its maximum accuracy. Scaling this up to larger datasets however would expose the cons to this approach further, so bearing this in mind, for all use cases a convoluted neural network appears to be the best option.
 
-
+![Separator](images/image1.png "Separator")
 # References
 
 [Dalal, N. and Triggs, B. (no date) ‘Histograms of Oriented Gradients for Human Detection’, 2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR’05). doi: 10.1109/cvpr.2005.177.](http://paperpile.com/b/tlKYPw/ndKo)
@@ -96,3 +93,5 @@ A CNN does the best job at classifying the images in a small dataset, with a res
 [Luo, C. et al. (2018) ‘How Does the Data set Affect CNN-based Image Classification Performance?’, 2018 5th International Conference on Systems and Informatics (ICSAI). doi: 10.1109/icsai.2018.8599448.](http://paperpile.com/b/tlKYPw/6aU5)
 
 [‘Scaling up Machine Learning Algorithms for Large Datasets’ (2016) International Journal of Science and Research (IJSR), pp. 40–43. doi: 10.21275/v5i1.nov152582.](http://paperpile.com/b/tlKYPw/ZchP)
+
+![Separator](images/image1.png "Separator")
